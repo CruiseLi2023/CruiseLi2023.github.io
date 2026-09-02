@@ -18,4 +18,4 @@ My goal is to learn more about aerospace engineering and eventually study it in 
 
 [NASA](https://www.nasa.gov/)
 
-![Space](https://images-assets.nasa.gov/image/iss064e034684/iss064e034684~large.jpg)
+![Tux, the Linux mascot](/assets/images/tux.png)
