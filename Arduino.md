@@ -42,7 +42,7 @@ Serial.println(distance);
 
 At first, this was important because I did not want to add the LEDs and buzzer until I knew the sensor itself worked.
 
-Iteration 2: Adding distance LEDs
+## Iteration 2: Adding distance LEDs
 
 Once the sensor was measuring correctly, I added three LEDs: green, yellow, and red.
 
