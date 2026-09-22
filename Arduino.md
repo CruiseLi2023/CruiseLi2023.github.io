@@ -15,37 +15,27 @@ Sources:
 ## My Process and Iterations
 
 ### Iteration 1: Getting the ultrasonic sensor working
-
 My first goal was just to make the ultrasonic sensor measure distance correctly.
-
 I connected the HC-SR04 sensor to power and ground, and connected its **Trig** and **Echo** pins to digital pins on the Arduino.
-
 The Arduino sends a very short pulse from the Trig pin:
-
 
 digitalWrite(trigPin, LOW);
 delayMicroseconds(2);
-
 digitalWrite(trigPin, HIGH);
 delayMicroseconds(10);
-
 digitalWrite(trigPin, LOW);
-Then I used:
 
+Then I used:
 duration = pulseIn(echoPin, HIGH);
 distance = (duration * 0.0343) / 2;
-
 I printed the result to the Serial Monitor so I could check whether the sensor was actually detecting objects.
-
 Serial.print("Distance: ");
 Serial.println(distance);
 
 At first, this was important because I did not want to add the LEDs and buzzer until I knew the sensor itself worked.
 
 ## Iteration 2: Adding distance LEDs
-
 Once the sensor was measuring correctly, I added three LEDs: green, yellow, and red.
-
 I wanted them to act like a warning system.
 
 Green = object is about 20–30 cm away
@@ -75,28 +65,20 @@ else if (distance < 10) {
 
 One problem I had was making sure only one LED was on at a time. I fixed this by setting the other two LEDs to LOW inside every condition instead of only turning the wanted LED on.
 
-Iteration 3: Adding the buzzer
-
+## Iteration 3: Adding the buzzer
 After the LEDs worked, I added a buzzer so the device could give an audio warning too.
-
 My first attempt was to treat the buzzer like an LED using:
-
 digitalWrite(buzz, HIGH);
-
 and
-
 digitalWrite(buzz, LOW);
 
 This could make the buzzer turn on and off, but it did not give me much control over the sound.
-
 I found the Arduino tone() function and changed my code so I could control the buzzer frequency.
-
 For example:
 
 tone(buzz, 300);
 
 This creates a 300 Hz sound.
-
 I then used different frequencies for different distances:
 
 tone(buzz, 300);
@@ -105,10 +87,8 @@ tone(buzz, 1200);
 
 This made the warning much easier to understand because the pitch became higher as the object got closer.
 
-Iteration 4: Making the warning more responsive
-
+## Iteration 4: Making the warning more responsive
 In my next version, I added another distance range for objects closer than 5 cm.
-
 Instead of using one fixed frequency, I experimented with changing the frequency based on the measured distance.
 
 else if (distance < 5) {
@@ -120,17 +100,14 @@ else if (distance < 5) {
 }
 
 Now the sound can change based on how close the object actually is instead of always playing exactly the same warning tone.
-
 I also used:
 
 noTone(buzz);
 
 when there was no object inside the warning range.
-
 This was better than my earlier version because the buzzer now gave more information than simply being on or off.
 
-Final Working Circuit
-
+## Final Working Circuit
 My final circuit included:
 
 Arduino Uno
@@ -198,9 +175,7 @@ digitalWrite(trigPin, LOW);
 The sensor sends an ultrasonic sound pulse. The frequency is too high for humans to hear.
 
 When the sound hits an object, it reflects back toward the sensor.
-
 The Echo pin stays HIGH for the amount of time the sound takes to travel out and return.
-
 I measure this time with:
 
 duration = pulseIn(echoPin, HIGH);
@@ -219,30 +194,19 @@ Without dividing by two, I would calculate the total round-trip distance instead
 
 This helped me understand that the sensor is really measuring time, and the Arduino converts that time into distance.
 
-Peer Support
-
+## Peer Support
 During the project, I helped Bruce with both his wiring and his code.
-
 He was having trouble understanding how some of the wires should connect and how the Arduino code controlled those connections. I showed him where the wires should go and explained how the pins in the code matched the physical pins on the Arduino.
-
 I also helped explain how the conditions in the code worked and how the Arduino decided when an output should turn on.
-
 After we went through it together, he understood the wiring and coding better and was able to continue working on his project.
-
 Helping him also made me think more carefully about my own circuit because I had to explain why each connection and line of code was there instead of only knowing that it worked.
 
-Use-Case Reflection
-
+## Use-Case Reflection
 A system like this could be useful as a parking distance sensor for a car or garage.
-
 For example, a driver could use it to know when the front of a car is getting close to a wall. When the car is far away, there would be little or no warning. As the car gets closer, the warning light and buzzer could become more urgent.
-
 My current project would need several improvements before it could actually be used for this.
-
 I would probably need a stronger and more reliable distance sensor, a louder buzzer, a case to protect the electronics, and a better power source. It could also use several sensors instead of only one so it could detect objects from different directions.
-
 The skill I would rely on most if I continued developing this project would be debugging. A system with more sensors and outputs would have more possible problems, so I would need to test one section at a time and use the Serial Monitor to check whether the sensor readings were correct.
-
 This project showed me how an input such as distance can be converted into several different outputs and behaviors.
 
 
