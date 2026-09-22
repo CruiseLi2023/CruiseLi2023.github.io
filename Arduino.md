@@ -210,3 +210,17 @@ The skill I would rely on most if I continued developing this project would be d
 This project showed me how an input such as distance can be converted into several different outputs and behaviors.
 
 
+
+![First hardware iteration](images/Hardware%201st%20Iteration.jpg)
+
+![First code iteration](images/Code%201st%20Iteration.jpg)
+
+![Second iteration](images/2nd%20Iteration.jpg)
+
+![Second code iteration](images/Code%202nd%20Iteration.jpg)
+
+![HC-SR04 tutorial](images/HC-SR04%20Tutorial.jpg)
+
+![Final hardware iteration](images/Hardware%20Final%20Iteration.jpg)
+
+![Final code iteration](images/Code%20Final%20Iteration.jpg)
