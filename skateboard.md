@@ -14,7 +14,7 @@ Our scanner will be much simpler than the professional scanner we saw. Instead o
 
 The main parts we are using right now are an Arduino Uno, an ultrasonic sensor, a motor, a breadboard, and jumper wires.
 
-![Scanner setup](images/scanner.jpg)
+![Scanner setup](images/basic.jpg)
 
 The Arduino is basically the controller of the project. It can send instructions to the other parts and receive information from the sensors.
 
@@ -36,7 +36,7 @@ Later, more parts and more movement could be added to make the scanner more adva
 
 ## Starting the Arduino Code
 
-![Arduino code](images/code.jpg)
+![Arduino code](images/basic_code.jpg)
 
 We have also started looking at Arduino code for the ultrasonic sensor.
 
