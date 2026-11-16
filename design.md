@@ -22,20 +22,20 @@ Campus Navigation Robot: Have a personal robot follow him around and guide him t
 
 4. 3 Best Ideas
 
-1. Digital Calendar
+Digital Calendar
 Create an online calendar that includes everything the student needs to do throughout the week.   
 Include all classes, activities, sports, meetings, deadlines, and school events.   
 Each event would show the exact time and location.   
 Add reminders before classes and activities so the student knows when they need to leave and where they need to go.   
 Allow the student to view their daily and weekly schedules in one place.   
 
-2. Campus Map
+Campus Map
 Create a digital or printed map showing all the important buildings, classrooms, offices, and other locations on campus.   
 Label each building so the student can easily recognize different places.   
 Include walking routes between buildings to help students find the fastest way to their next class.   
 Make the map easy to access on a phone so students can check it whenever they need help.   
 
-3. Student Tour Guide
+Student Tour Guide
 Pair a new student with an experienced student who already knows the campus.   
 Have the experienced student show them important locations, classrooms, dining areas, and other facilities.   
 The guide could explain school routines and answer questions about daily life.   
